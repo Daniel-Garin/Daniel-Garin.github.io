@@ -1,0 +1,610 @@
+#projects {
+  background-color: $light-white;
+  color: $dark-blue-text;
+  margin-top: -15rem;
+  padding-top: 15rem;
+  @include respond(tab-land) {
+    margin-top: 0;
+    padding-top: 5rem;
+  }
+  @include respond(phone) {
+    padding-bottom: 1px;
+  }
+  .project-wrapper {
+    margin-bottom: 15rem;
+    @include respond(phone) {
+      margin-bottom: 0rem;
+    }
+    .row {
+      margin: 0;
+      margin-bottom: 8rem;
+      @include respond(phone) {
+        margin-bottom: 4rem;
+      }
+    }
+
+
+    .filters {
+      margin-bottom: 4rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    &__filters-category {
+      width: 100%;
+      align-self: center;
+      padding: 2em;
+    }
+    
+    .project-filter {
+      background-color: transparent;
+      font-size: 2em;
+      font-weight: 700;
+      text-transform: capitalize;
+      margin: 0 12px 18px;
+      color: darken(desaturate($secondary-color, $amount: 70%), 20%);
+      border-radius: 10px;
+      outline-style: solid;
+      outline-offset: 4px;
+      outline-color: darken(desaturate($secondary-color, $amount: 70%), 20%);
+      border: none;
+      cursor: pointer;
+      padding-bottom: 2px;
+      -webkit-transition: all 0.15s ease;
+      transition: all 0.15s ease;
+      
+      &:hover {
+        outline-offset: 8px;
+        outline-color: $secondary-color;
+      }
+      // When being clicked
+      &:active {
+        outline-offset: 12px;
+        transition:0s;
+        transition-timing-function: step-end;
+      }
+
+    }
+    .project-filter.active {
+      color: $secondary-color;
+      outline-style: solid;
+      outline-color: $secondary-color;
+      outline-offset: 8px;
+    }
+
+    .project-item.show{
+      animation: showproject 0.7s cubic-bezier(0.5, 0, 0, 1);
+    }
+
+    @keyframes showproject {
+      from{opacity: 0;}
+      to{opacity: 1;}
+    }
+
+    .project-item.hide{
+      opacity: 0;
+      display: none;
+    }
+
+
+
+    &__text {
+      width: 100%;
+      text-align: left;
+      @include respond(tab-land) {
+        margin-bottom: 4.8rem;
+      }
+      @include respond(phone) {
+        margin-bottom: 2.5rem;
+      }
+      &-title {
+        font-weight: 700;
+        margin-bottom: 1.8rem;
+        font-size: $mid-font-size;
+
+        @include respond(phone) {
+          font-size: 2rem;
+        }
+      }
+      
+      &-labels {
+        height: fit-content;
+        margin-bottom: 2rem;
+        
+      }
+
+      .label {
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 0.025rem;
+        font-style: normal;
+        text-transform: capitalize;
+        color: #0d0049;
+        margin-right: 0.4em;
+        margin-bottom: 0.3em;
+        display: inline-block;
+        
+        border-radius: 0.4rem;
+        -webkit-border-radius: 0.4rem;
+        -moz-border-radius: 0.4rem;
+        padding: 0.3rem 0.5rem;
+        border-style: none;
+        border-width: 0rem;
+        border-color: #EF2D56;
+        height:fit-content;
+      }
+
+        label.game {
+          background-color: #12fffb;
+        }
+        label.tool {
+          background-color: #24ff3e;
+        }
+        label.unity {
+          color:#d2deff;
+          background-color: #1a1f45;
+        }
+        label.shaders {
+          color:#000615;    
+           
+          background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+          background-size: 1800% 1800%;
+
+          -webkit-animation: rainbow 18s ease infinite;
+          -z-animation: rainbow 18s ease infinite;
+          -o-animation: rainbow 18s ease infinite;
+            animation: rainbow 18s ease infinite;
+        }
+          @-webkit-keyframes rainbow {
+              0%{background-position:0% 82%;
+                color: #000615 #d2deff}
+              50%{background-position:100% 19%}
+              100%{background-position:0% 82%}
+          }
+          @-moz-keyframes rainbow {
+              0%{background-position:0% 82%;
+                color: #000615 #d2deff}
+              50%{background-position:100% 19%}
+              100%{background-position:0% 82%}
+          }
+          @-o-keyframes rainbow {
+              0%{background-position:0% 82%;
+                color: #000615}
+              50%{background-position:100% 19%;
+                color: #d2deff}
+              100%{background-position:0% 82%}
+          }
+          @keyframes rainbow { 
+            0%{background-position:0% 82%;
+              color: #000615}
+            50%{background-position:100% 19%;
+              color: #d2deff}
+              100%{background-position:0% 82%;
+                color: #000615}
+          }
+          
+        label.vr {
+          background-color: #ed4a41; 
+        }
+        label.sound {
+          background-color: #74ff8b;
+        }
+        label.modeling {
+          background-color: #fce42e;
+        }
+        label.c {
+          color: #d2deff;
+          background-color: #00589D;
+        }
+
+        label.other {
+          background-color: #d747ff;
+        }
+
+      &-info {
+        margin-bottom: 1.5rem;
+        font-weight: 300;
+      }
+
+      &-btns {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        cursor: pointer;
+      }
+    }
+
+    &__image {
+      width: 90%;
+      margin: 0 auto;
+
+      @include respond(tab-land) {
+        width: 100%;
+        margin: 0;
+      }
+      & .thumbnail {
+        outline-style: solid;
+        outline-color: rgba(0, 40, 56, 1);
+        outline-offset: 0px;
+        border-radius: 15px;
+        box-sizing: border-box;
+        padding: 0.1%;
+
+        transition-property: outline-offset;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+
+        
+        .img-fluid {
+          width: 100%;
+          height: auto;
+          vertical-align: middle;
+          border-radius: 15px;
+        }
+        @include respond(phone) {
+          box-shadow: none;
+          margin-bottom: 3.2rem;
+          transform: none;
+        }
+        .img-fluid-hover {
+          width: 100%;
+          height: 100%;
+          border-radius: 15px;
+          position: absolute;
+          top:0%;
+          left: 0;
+          opacity: 0;
+          transition: opacity .2s;
+        }
+        .img-fluid-hover:hover {
+          opacity: 1;
+        }
+      }
+      & .thumbnail:hover {
+        outline-offset: 8px;
+        outline-color: rgb(85, 236, 237);
+    
+      }
+    }
+  }
+
+
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    padding-top: 2%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(9, 9, 16, 0.8); /* Black w/ opacity */
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    position: relative;
+    display:flex;
+    margin: auto;
+    padding: 0;
+    border: 3px solid $secondary-color;
+    border-radius: 15px;
+    width: 90%;
+    height: 95%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: #000615;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    @include respond(phone) { 
+      width: 100%;
+      height: 100%;
+    }
+
+    .modal-page {
+      margin: 0;
+      position: relative;
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+
+      @include respond(phone) { 
+      //align-items:center;
+      justify-content: center;
+      flex-wrap: wrap;
+      }
+    }
+
+    .modal-text-wrapper { 
+      display: block;
+      text-align: justify;
+      position: relative;
+      margin-top: auto; 
+      margin-bottom: auto;
+      margin-left: 5%;
+      margin-right: 5%;
+
+      font-size: 2vmin;
+
+      overflow-y:auto;
+      padding-right: 5px;
+      padding-left: 5px;
+
+      width: 50%;
+      height: 70%;
+
+      @include respond(phone) { 
+        //text-align: center;
+        margin : 0;
+        width: 80%;
+        height: 40%;
+
+        margin-top: -15%;
+
+        font-size: large;
+      }
+    }
+
+    .img-modal {
+      display: block;
+      position: relative;
+      margin-top: auto; 
+      margin-bottom: auto;
+      margin-left: 5%;
+      margin-right: auto;
+      
+      width: 50%;
+      height: 80%;
+      object-fit: cover;
+  
+      background-color: $white-color;
+      outline-style: solid;
+      outline-color:  $secondary-color;
+      outline-offset: 0px;
+      border-radius: 15px;
+     
+      transition-duration: 0.15s;
+
+      &:hover {
+        outline-offset: 8px;
+      }
+
+      @include respond(phone) { 
+        margin : 0;
+        margin-top: 5%;
+        width: 60%;
+        height: 40%;
+      }
+
+    }
+    .img-modal.active {
+      position: absolute;
+      object-fit: contain;
+
+      outline-offset: 0px;
+
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      z-index: 3;
+      overflow: hidden;
+    }
+
+    .left-modal-button, .right-modal-button {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0; 
+      user-select: none;
+      transition: 100ms;
+    }
+
+    .prev-hover, .next-hover{
+      transition: 100ms;
+      opacity: 1;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      font-size: 2em;
+
+      border-radius: 15px;
+      outline-style: solid;
+      outline-offset: 4px;
+      outline-color: darken(desaturate($secondary-color, $amount: 70%), 20%);
+      
+
+      &:hover {
+        outline-offset: 8px;
+        outline-color: $secondary-color;
+      }
+      &:active {
+        outline-offset: 12px;
+      }
+    }
+
+    .right-modal-button {
+      right:1em;
+    }
+
+
+    .mySlides1, .mySlides2 {display: none}
+
+    /* The dots/bullets/indicators */
+    .slideDots {
+      position: absolute;
+      right: auto;
+      left: auto;
+      width: 100%;
+      bottom: 5%;
+      text-align:center;
+    }
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #626262;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.2s ease;
+      
+    }
+
+    .dot.active{
+      background-color: $secondary-color;
+    }
+
+    a {
+      color: $secondary-color;
+    }
+  }
+  
+
+
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+
+  .button-scroll-container {
+    display: block;
+    margin-right: 5px;
+    margin-left: 1%;
+    margin-top: 5em;
+    padding: 3%;
+    padding-top: 0%;
+    height: 85%;
+    
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+
+  .substance-textures-select {
+    display: flex;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    margin-bottom: 30px;
+    padding: 10%;
+
+    font-size: 1.4em;
+    font-weight: 600;
+    text-transform: capitalize;
+   
+    color: darken(desaturate($secondary-color, $amount: 70%), 20%);
+    border-radius: 10px;
+    outline-style: solid;
+    outline-offset: 4px;
+    outline-color: darken(desaturate($secondary-color, $amount: 70%), 20%);
+    border: none;
+    cursor: pointer;
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+    
+    &:hover {
+      outline-offset: 6px;
+      outline-color: $secondary-color;
+    }
+    &:active {
+      outline-offset: 10px;
+      transition:0s;
+      transition-timing-function: step-end;
+    }
+  }
+  .substance-textures-select.active {
+    color: $secondary-color;
+    outline-style: solid;
+    outline-color: $secondary-color;
+    outline-offset: 8px;
+  }
+
+  .model-viewer {
+    display: block;
+    margin-top: auto;
+    width: 100%;
+    height: 100%;
+
+    background-color: #1a1a1a;
+    border-radius: 15px;
+  }
+
+  #model-load-button {
+    color: white;
+    border-radius: 6px;
+    display: inline-block;
+    padding: 10px 40px 9px 40px;
+    font-weight: 500;
+    font-size: large ;
+    box-shadow: 0 0 8px rgba(0,0,0,.2), 0 0 4px rgba(0,0,0,.25);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 100;
+  }
+
+  .model-preview-progress-bar {
+    display: block;
+    width: 33%;
+    height: 10%;
+    max-height: 2%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    border-radius: 25px;
+    box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
+    border: 1px solid $secondary-color;
+    background-color: rgba(0, 0, 0, 1);
+  }
+
+  .model-preview-progress-bar.hide {
+    visibility: hidden;
+    transition: visibility 0;
+  }
+  .update-bar {
+    background-color: $dark-blue-text;
+    width: 0%;
+    height: 100%;
+    border-radius: 25px;
+    float: left;
+    transition: width 0.3s;
+  }
+
+
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+
+    vertical-align: middle;
+    display: inline-block;
+    padding: 4px 16px;
+    position: absolute;
+    right: 0;  
+    top: 0;
+    margin-top: 0;
+
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+}
