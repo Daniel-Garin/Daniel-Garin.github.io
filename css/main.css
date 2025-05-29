@@ -1333,7 +1333,7 @@ section .row span {
 }
 
 #projects .close {
-    color: #b29146;
+    color: #e0aa3e;
     font-size: 28px;
     font-weight: bold;
     vertical-align: middle;
@@ -1367,5 +1367,5 @@ section .row span {
 }
 
 html {
-    background-color: #464545
+    background-color: #0c0c0c
 }
