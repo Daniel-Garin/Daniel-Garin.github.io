@@ -6,12 +6,11 @@ let modals = document.getElementsByClassName("modal");
 
 // Get the button that opens each modal add to the array in order of appearance
 var btn_guilt = document.getElementsByClassName("guilt-modal-button");
-var btn_grass = document.getElementsByClassName("grass-modal-button");
-var btn_substance = document.getElementsByClassName("substance-textures");
-var btn_pitarcus = document.getElementsByClassName("pitarcus-modal-button");
+var btn_privacy = document.getElementsByClassName("privacy-modal-button");
+var btn_aqua = document.getElementsByClassName("aqua-modal-button");
 
 // Button should be added in the order of appeareance in the page
-let buttons = [btn_guilt, btn_substance, btn_grass, btn_pitarcus];  
+let buttons = [btn_guilt, btn_privacy, btn_aqua];  
 
 
 // Get the <span> element that closes the modal
@@ -113,7 +112,7 @@ for (var i = 0; i < modelImages.length; i++) {
   })
 };
 
-
+/*
 // -- 3D MODEL VIEWER MODAL PAGE FUNCTIONALITY --
 var modelViewer = document.getElementsByClassName("model-viewer")[0];
 
@@ -253,4 +252,4 @@ const onProgress = (event) => {
   }
 };
 modelViewer.addEventListener('progress', onProgress);
-  
+*/  
