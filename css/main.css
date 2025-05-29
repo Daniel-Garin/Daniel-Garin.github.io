@@ -726,7 +726,7 @@ section .row span {
 }
 
 #projects {
-    background-color: #020202;
+    background-color: #0c0c0c;
     color: #ebffff;
     margin-top: -15rem;
     padding-top: 15rem
@@ -872,7 +872,7 @@ section .row span {
     letter-spacing: .025rem;
     font-style: normal;
     text-transform: capitalize;
-    color: #0d0049;
+    color: #110c00;
     margin-right: .4em;
     margin-bottom: .3em;
     display: inline-block;
