@@ -116,13 +116,11 @@ a:hover {
 
 .cta-btn--hero {
     color: #b29146;
-    padding: .8rem 1rem;
     -webkit-text-fill-color: #b29146
 }
 
 @supports((-webkit-background-clip: text) or (background-clip: text)) or (-webkit-background-clip: text) {
     .cta-btn--hero {
-        padding: .8rem 1rem;
         background-image: linear-gradient(135deg, rgb(224, 170, 62) 0%, rgb(178, 145, 70) 100%);
         -webkit-background-clip: text;
         background-clip: text;
@@ -143,7 +141,6 @@ screen and (-ms-high-contrast: none) {
 
 @media(max-width: 37.5em) {
     .cta-btn--hero {
-        padding: .8rem 1rem;
         background-image: none;
         border: 2px solid #b29146;
         box-shadow: none;
@@ -200,7 +197,6 @@ screen and (-ms-high-contrast: none) {
 
 .cta-btn--projects {
     border: 2px solid #b29146;
-    padding: .8rem 1rem;
     border-radius: 10px
 }
 
@@ -489,7 +485,7 @@ section .row span {
 }
 
 #about .about-wrapper a:active {
-    color: #000b31;
+    color: #000413;
     background-color: rgba(0, 0, 0, 0);
     text-decoration: underline
 }
@@ -1045,7 +1041,7 @@ section .row span {
     width: 90%;
     height: 95%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
-    background-color: #000615;
+    background-color: #050505;
     animation-name: animatetop;
     animation-duration: .4s
 }
@@ -1371,5 +1367,5 @@ section .row span {
 }
 
 html {
-    background-color: #040c27
+    background-color: #000208
 }
