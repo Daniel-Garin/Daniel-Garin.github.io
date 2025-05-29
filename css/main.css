@@ -78,7 +78,7 @@ a:hover {
 .cta-btn {
     display: inline-block;
     position: relative;
-    padding: .8rem 1rem;
+    padding: .8rem 1.4rem;
     font-weight: bold;
     line-height: 1;
     z-index: 1;
@@ -135,7 +135,7 @@ screen and (-ms-high-contrast: none) {
         color: #b29146
     }
     .cta-btn--hero:hover {
-        color: #00061b
+        color: #030303
     }
 }
 
@@ -155,7 +155,7 @@ screen and (-ms-high-contrast: none) {
 }
 
 .cta-btn--hero:hover {
-    -webkit-text-fill-color: #00061b;
+    -webkit-text-fill-color: #030303;
     text-decoration: none
 }
 
@@ -171,12 +171,12 @@ screen and (-ms-high-contrast: none) {
 
 .cta-btn--resume {
     border-radius: 10px;
-    color: #00061b;
-    border: 2px solid #00061b
+    color: #030303;
+    border: 2px solid #030303
 }
 
 .cta-btn--resume::after {
-    background: #00061b
+    background: #030303
 }
 
 .cta-btn--resume:hover {
@@ -187,7 +187,7 @@ screen and (-ms-high-contrast: none) {
 
 @media(max-width: 37.5em) {
     .cta-btn--resume:hover {
-        color: #00061b
+        color: #030303
     }
 }
 
@@ -262,7 +262,7 @@ screen and (-ms-high-contrast: none) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #00061b;
+    color: #030303;
     width: 5rem;
     height: 5rem;
     margin: 1.6rem 1.6rem;
@@ -298,7 +298,7 @@ screen and (-ms-high-contrast: none) {
 }
 
 .back-to-top i {
-    color: #00061b;
+    color: #030303;
     margin: 1rem 0 1.6rem;
     transition: all 200ms ease
 }
@@ -387,7 +387,7 @@ section .row span {
 #about {
     background-color: #e0aa3e;
     background-image: linear-gradient(135deg, rgb(224, 170, 62) 0%, rgb(178, 145, 70) 100%);
-    color: #00061b;
+    color: #030303;
     height: 100%;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
@@ -467,7 +467,7 @@ section .row span {
 }
 
 #about .about-wrapper a :link {
-    color: #00c4b7;
+    color: #e0aa3e;
     background-color: rgba(0, 0, 0, 0);
     text-decoration: none
 }
@@ -479,7 +479,7 @@ section .row span {
 }
 
 #about .about-wrapper a:hover {
-    color: #00f4a7;
+    color: #e0aa3e;
     background-color: rgba(0, 0, 0, 0);
     text-decoration: underline
 }
@@ -579,7 +579,7 @@ section .row span {
     height: 100vh;
     display: flex;
     align-items: center;
-    background: #00061b;
+    background: #000000;
     font-weight: 500;
     color: #ebffff;
     padding: 0rem 5.6rem;
@@ -726,7 +726,7 @@ section .row span {
 }
 
 #projects {
-    background-color: #040c27;
+    background-color: #020202;
     color: #ebffff;
     margin-top: -15rem;
     padding-top: 15rem
@@ -784,11 +784,11 @@ section .row span {
     font-weight: 700;
     text-transform: capitalize;
     margin: 0 12px 18px;
-    color: #494949;
+    color: #1b1302;
     border-radius: 10px;
     outline-style: solid;
     outline-offset: 4px;
-    outline-color: #494949;
+    outline-color: #1b1302;
     border: none;
     cursor: pointer;
     padding-bottom: 2px;
@@ -972,7 +972,7 @@ section .row span {
 
 #projects .project-wrapper__image .thumbnail {
     outline-style: solid;
-    outline-color: #002838;
+    outline-color: #3a2a00;
     outline-offset: 0px;
     border-radius: 15px;
     box-sizing: border-box;
@@ -1105,7 +1105,7 @@ section .row span {
     height: 80%;
     -o-object-fit: cover;
     object-fit: cover;
-    background-color: #00061b;
+    background-color: #00020a;
     outline-style: solid;
     outline-color: #b29146;
     outline-offset: 0px;
@@ -1167,7 +1167,7 @@ section .row span {
     border-radius: 15px;
     outline-style: solid;
     outline-offset: 4px;
-    outline-color: #494949
+    outline-color: #1d1402
 }
 
 #projects .modal-content .prev-hover:hover,
