@@ -78,7 +78,7 @@ a:hover {
 .cta-btn {
     display: inline-block;
     position: relative;
-    padding: .8rem 1.6rem;
+    padding: .8rem 1rem;
     font-weight: bold;
     line-height: 1;
     z-index: 1;
