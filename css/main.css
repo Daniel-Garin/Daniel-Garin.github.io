@@ -78,7 +78,7 @@ a:hover {
 .cta-btn {
     display: inline-block;
     position: relative;
-    padding: .8rem 1.4rem;
+    padding: .8rem 1rem;
     font-weight: bold;
     line-height: 1;
     z-index: 1;
@@ -116,6 +116,7 @@ a:hover {
 
 .cta-btn--hero {
     color: #b29146;
+    padding: .8rem 1rem;
     -webkit-text-fill-color: #b29146
 }
 
@@ -485,7 +486,7 @@ section .row span {
 }
 
 #about .about-wrapper a:active {
-    color: #0037ff;
+    color: #000b31;
     background-color: rgba(0, 0, 0, 0);
     text-decoration: underline
 }
