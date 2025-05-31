@@ -473,7 +473,7 @@ section .row span {
 }
 
 #about .about-wrapper a:visited {
-    color: #5d6d86;
+    color: #333333;
     background-color: rgba(0, 0, 0, 0);
     text-decoration: none
 }
