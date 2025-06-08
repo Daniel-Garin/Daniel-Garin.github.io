@@ -427,8 +427,6 @@ section .row span {
     width: 100%;
     border-radius: 10px;
     margin-left: 20%;
-    filter: brightness(8%);
-    -webkit-filter: brightness(8%);
     z-index: 0;
     transition: filter 200ms linear;
     -webkit-transition: -webkit-filter 200ms linear
