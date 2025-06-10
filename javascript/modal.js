@@ -5,12 +5,13 @@ var modal = document.getElementById("myModal");
 let modals = document.getElementsByClassName("modal");
 
 // Get the button that opens each modal add to the array in order of appearance
+var btn_cyberserker = document.getElementsByClassName("cyberserker-modal-button");
 var btn_guilt = document.getElementsByClassName("guilt-modal-button");
 var btn_privacy = document.getElementsByClassName("privacy-modal-button");
 var btn_aqua = document.getElementsByClassName("aqua-modal-button");
 
 // Button should be added in the order of appeareance in the page
-let buttons = [btn_guilt, btn_privacy, btn_aqua];  
+let buttons = [btn_cyberserker, btn_guilt, btn_privacy, btn_aqua];  
 
 
 // Get the <span> element that closes the modal

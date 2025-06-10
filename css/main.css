@@ -1183,8 +1183,10 @@ section .row span {
     right: 1em
 }
 
+#projects .modal-content .mySlides0,
 #projects .modal-content .mySlides1,
-#projects .modal-content .mySlides2 {
+#projects .modal-content .mySlides2,
+#projects .modal-content .mySlides3 {
     display: none
 }
 
