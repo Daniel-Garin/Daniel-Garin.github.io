@@ -181,23 +181,24 @@ Have fun creating your portfolio on this template!!! -->
               <p class="project-wrapper__text-info">
                 Fast-paced, first person platformer where constant movement is at its focus. 
                 The player must traverse through the levels and fight the enemies in their way using their varied set of movement and combat skills.
-
               </p>
               <div class="project-wrapper__text-btns">
                 <a
                 target="_blank" 
-                class="cta-btn cta-btn--hero cta-btn--projects cyberserker-modal-button">
+                class="cta-btn cta-btn--hero cta-btn--projects guilt-modal-button">
                 Read More
                 </a>
-                <a target="_blank" href="./assets/Cyberserker.pdf" class="cta-btn text-color-main">GDD</a>
+                <a href="./assets/Cyberserker.pdf" target="_blank" class="cta-btn text-color-main">
+                  GDD</a
+                >
               </div>
             </div>
 
             <div class="project-wrapper__image">
               <a href="_blank" target="_blank" rel="noopener noreferrer"></a>
-                <div class="thumbnail rounded cyberserker-modal-button">
+                <div class="thumbnail rounded guilt-modal-button">
                   <img
-                    src="./assets/cyberserker_thumb.jpeg"
+                    src="./assets/GUILT_Thumb.png"
                     class="img-fluid"
                     alt="Project Image"
                     width="1366"
@@ -206,16 +207,34 @@ Have fun creating your portfolio on this template!!! -->
                 </div>
             </div>
             <!-- THE MODAL -->
-            <div id="cyberserkerModal" class="modal">
+            <div id="guiltModal" class="modal">
             <!-- Modal content -->
               <div class="modal-content">
-                <div  class="modal-page mySlides0">
+                <div class="modal-page mySlides1">
                   <img
-                    src="./assets/blockoutfinal2.gif"
-                    class="img-modal"
-                    alt="Project Image"
-                    width="1366"
-                    height="767"
+                  src="./assets/guilt_visual_flow_livingRoom.png"
+                  class="img-modal"
+                  alt="Project Image"
+                  width="1366"
+                  height="767"
+                  />
+                  <div class="modal-text-wrapper">
+                    <p>
+                    The game makes use of environmental design and various resources (such as visual flows using lighting) to guide the player without the need of a external HUD.
+                    </p>
+                    <p>
+                    In this screenshot for example, the central position of the gramophone and the outside lighting being focused on it, guide the player into approaching and interacting with it the moment they enter the room.
+                    </p>
+                  </div>           
+                </div>
+
+                <div  class="modal-page mySlides1">
+                  <img
+                  src="./assets/blockoutfinal2.gif"
+                  class="img-modal"
+                  alt="Project Image"
+                  width="1366"
+                  height="767"
                   />
                   <div class="modal-text-wrapper">
                     <p>
@@ -223,23 +242,62 @@ Have fun creating your portfolio on this template!!! -->
                     to other mechanics that allow the interaction with elements in the level, like being able to grapple toward certain designated points or swinging around others.
                     </p>
                   </div>
+                </div>             
+                
+                <div class="modal-page mySlides1">
+                  <img
+                  src="./assets/guilt_note.png"
+                  class="img-modal"
+                  alt="Project Image"
+                  width="1366"
+                  height="767"
+                  />
+                  <div class="modal-text-wrapper">
+                    <p>
+                    Narrative-wise, the story isn't directly told the player, instead relying fully on how they interpret the environment and the interactable objects within it.
+                    </p>
+                    <p>
+                    Said story has been designed so that no canonical interpration exists, allowing each player to intepret their own based on their own experiences.
+                    </p>
+                  </div>           
                 </div>
 
-                <!-- Buttons for slideshow
+                <div class="modal-page mySlides1">
+                  <img
+                  src="./assets/guilt_lock_puzzle.png"
+                  class="img-modal"
+                  alt="Project Image"
+                  width="1366"
+                  height="767"
+                  />
+                  <div class="modal-text-wrapper">
+                    <p>
+                    The game also counts with several, more interactable puzzles, that reward exploration. These provide the player with further context in order to help them expand their story.
+                    </p>
+                  </div>           
+                </div>
+
+                <!-- TODO Add slide for cutscene-->
+
+                <!-- Buttons for slideshow-->
                 <div class="left-modal-button">
                   <a class="fa-solid fa-chevron-left prev-hover" style="color:rgb(178, 145, 70);" onclick="plusSlides(-1, 0)"></a>
                 </div>
                 <div class="right-modal-button">
                   <a class="fa-solid fa-chevron-right next-hover" style="color:rgb(178, 145, 70);" onclick="plusSlides(1, 0)"></a>
                 </div>
-                  The dots/circles
+                  <!-- The dots/circles -->
                 <div class="slideDots" style="text-align:center">
-                  <span class="dot slideDots0" ></span>
+                  <span class="dot slideDots1" ></span>
+                  <span class="dot slideDots1"></span>
+                  <span class="dot slideDots1"></span>   
+                  <span class="dot slideDots1"></span> 
                 </div>
-                <span class="close">&times;</span>-->
+                <span class="close">&times;</span>
               </div>
             </div>
           </article>
+          <!-- /END Project -->
 
           <!-- GUILT -->
           <article class="row project-item">
