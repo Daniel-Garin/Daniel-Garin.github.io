@@ -26,6 +26,7 @@ filterContainer.addEventListener("click", function(event) {
 
         const filterValue = event.target.getAttribute("data-filter");
         
+        // depending on the filter chosen, an element will either become hidden or visible
         projectsCategorized.forEach((project)=> {
             if(project.labels.includes(filterValue) || filterValue == "all"){
                 project.projectElement.classList.remove("hide");

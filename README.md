@@ -1,7 +1,24 @@
-## Acknowledgments
+# Game Dev Portfolio
+#### Video Demo:  <https://youtu.be/MF0ciRTgp08>
+#### Description:
+This project is a web portfolio that showcases the projects that I have done as a game developer. The main gimmick is the use of modals, which are displayed on the screen when the user clicks on any of the projects to learn more about them.
 
-- Used the template by **Anil Seervi** as the basis for my page - [https://github.com/AnilSeervi](https://github.com/AnilSeervi)
+The webpage is structured with four sections: a Hero, an About, a Projects and a Footer. And to create a smooth transition between each of them and the elements that form them, I use the script **scrollveal.js**. This script simply uses the *reveal()* method from the *ScrollReveal* js library on each of the elements that form the webpage to do that smooth transition as the first appear on the screen.
 
-## License
+Continuing with the Projects Section, where the brunt of the programming is present, I first make use of the script **categoryfilter.js** to create a filter that only shows the projects depending on the choices, which are: "All", "Unreal", "Unity" and "Mobile". At first I though about making a more detailed filter system with several tags per project, but due to not having that many projects overall, I simplified it but kept the more complex system in case of further expansion. 
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+As to how the script works, in the **index.html**, a <label> tag with a class equal to one of the four tags is added to each project. Then, in the **categoryfilter.js** script, I store the different filters and projects in variables (filterContainer and projectItems), then, using the function *CreateCategoryItems()*, I navigate through each of the projects and store in the array projectsCategorized those projects with their corresponding labels. 
+Finally, an event listener is added to the filterContainer for when the user clicks on any of the filters. This triggers a function that stores the filter value chosen and loops through the projectsCategorized array checking for that filter value. In case of matching it, the element the project belongs to becomes visible, and if it doesn't, it gets set to hidden.
+
+Now, for the biggest and most complex functionality there's the **modal.js** script, which is the one in charge of creating the modal navigation and functionalities for each of the projects. Similar to the filtering script, the system begins in the **index.html**. Here, each project, after basic functionality like hyperlinks and thumbnail images, has a <div> with the "modal" class, identified by an id of their name. 
+The content of each of the modal consists on one or several <div> with text that explains certain features of the project and an image or gif acting as a visual example of said text. When several <div> are part of a modal, a slideshow to navigate between them is added, with several <span> containing slide dots to indicate which page of the slideshow the user is in. Each slide also counts with another <span> with the character "×" that is used to close the modal when clicked on.
+
+Now, onto the **modal.js** script itself. It starts by taking the several <div> with the "modal" class and storing those elements in the *modals* variable. Following this, the buttons that open each modal are stored in an array and, whenever any of them is clicked, a forEach loops through them and makes the selected modal visible by setting its display to "block". After this, there are a couple of simple functions that are in charge of closing the modal. One does so when the <span> with the "×" character is clicked, while the other does it if the user clicks anywhere in the screen outside the modal. Both of these close the modal by setting its display to "none".
+
+Next, we move into the more complex slide system for the modals. To make it work four variables are used, an array *slideIndex* for the index that will indicate the current slide, *slideNumber* for the number of slideshows (same as number of modals), and two arrays *slideId* and *dotsId* for the ids of both the slides and the slide dots. Afterward, the function *InitSlideIds()* loops based on *slideNumber*, pushes the values to both Id arrays and sets the first slide of each modal as the one that will be shown by calling the *showSlides()* function with the first parameter as 1.
+
+After this, there is a very short function named *plusSlides()*, which will be called every time the user clicks on the arrows to go back or forth through the slides. To do this this function simply calls *showSlides()* with the values sent from the **index.html**.
+
+Then, there is the *showSlides()* function. The function begins by making sure that everything is cleared by setting the display of all slides to "none". Next, using the second parameter passed to the function (the one that identifies the slide itself), it makes the slide visible by setting its display to "flex". It also clears all the slide dots and sets the one for the current slide as "active", which causes it to become visibly distinct.
+
+Now, to finalize the document, there is a loop that adds an event listener to the images within the slides so that when they are clicked on, they are set to "active", which makes them occupy the entire space of the modal in order to be fully displayed and visible. If the user clicks again the image simply is change from "active" to empty.
