@@ -834,21 +834,5 @@
     </script>
     <script src="./javascript/vanilla-tilt.min.js"></script>
     <script type="text/javascript" src="./javascript/valtilt.js"></script>
-
-    <script>
-      window.addEventListener('load', () => {
-  const hash = window.location.hash;
-  if (hash) {
-    const element = document.querySelector(hash);
-    if (element) {
-      setTimeout(() => {
-        ScrollReveal().clean(element);
-        const top = element.getBoundingClientRect().top + window.scrollY;
-        window.scrollTo({ top: top, behavior: 'smooth' });
-      }, 800);
-    }
-  }
-});
-    </script>
   </body>
 </html>
