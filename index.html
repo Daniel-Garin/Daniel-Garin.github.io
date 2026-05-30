@@ -844,7 +844,11 @@
           const element = document.querySelector(hash);
           if (element) 
           {
-            setTimeout(() => {element.scrollIntoView(); }, 500);
+            setTimeout(() => 
+            {
+              const top = element.getBoundingClientRect().top + window.scrollY;
+              window.scrollTo({ top: top, behavior: 'smooth' });
+            }, 800);
           }
         }
       });
